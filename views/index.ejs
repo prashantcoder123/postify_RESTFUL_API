@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Postify Posts</h1>
+    <!-- loop ke liye interpollation ka syntex hai yee -->
+    <div class="card">
+    <% for(post of posts) { %>  
+    <div class="post">
+        <!-- interpollation syntexx -->
+        <h3 class="username">@<%=post.username %></h3> 
+        <h4 class="content"> <%= post.content %></h4>
+        <a class="anchor" href="http://localhost:8080/posts/<%= post.id%>">See in details</a>
+        <br>
+       
+        <a class="anchor" href="http://localhost:8080/posts/<%= post.id%>/edit">Edit</a>
+        <br>
+        <br>
+        <form class="delete"   method="post" action="/posts/<%=post.id%>?_method=DELETE">
+            <button class="btn">Delete post </button>
+        </form>
+        
+    </div>
+    <%}%>
+</div>
+    <br>
+    <br>
+
+    <a  style="margin-left: 50px;" class="anchor"  href="http://localhost:8080/posts/new">Create new post</a>
+    <!-- //new post create krne ke liye ye new post bale route pe le jaiyega.. -->
+</body>
+</html>
+

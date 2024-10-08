@@ -1,0 +1,40 @@
+h1{
+    color: maroon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.post{
+    background-color:blanchedalmond ;
+    height: 500px;
+     width: 900px; 
+     margin: 15px;
+    
+    
+} 
+.username{
+    padding-left: 30px;
+    font-style: italic;
+}
+.content{
+    padding-left: 30px;
+    font-style: italic;
+}
+.anchor{
+    padding-left: 30px;
+    text-decoration: none;
+    font-size: 25px;
+}
+.delete{
+    padding-left: 30px;
+    
+    
+}
+.btn{
+    color:red ;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <h1 style="display: flex;justify-content: center;color: maroon;">Edit your post</h1>
+    <p style="display: flex;justify-content: center;">Post id : <%= post.id %></p>
+    <p style="display: flex;justify-content: center;">Post username :<%= post.username %></p>
+    <form style="display: flex;justify-content: center;" method="post" action="/posts/<%=post.id%>?_method=PATCH">  
+        <!-- query string upar bala  -->
+       <div> <textarea rows="10" cols="35" name="content"><%= post.content %></textarea>
+        <br>
+        <button  style="color: red;margin-left: 94px;">Submit</button>
+    </div>
+    </form>
+
+</body>
+</html>

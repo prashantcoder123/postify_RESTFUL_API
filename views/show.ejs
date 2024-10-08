@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post in Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 style="display: flex;justify-content: center;"> Here is your post in details</h1>
+    <p style="display: flex;justify-content: center;">Post id : <%= post.id %></p>
+    <div  class="post">
+        <h3 style="padding-left: 30px;" class="user">@<%=post.username %></h3>
+        <h4 style="padding-left: 30px;"  ><%=post.content %></h4>
+        <a class="anchor" href="http://localhost:8080/posts/<%= post.id%>/edit">Edit</a>
+
+    </div>
+</body>
+</html>
