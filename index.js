@@ -6,7 +6,7 @@ app.set("view engine","ejs"); //ejs ke liye likhe hai
 app.use(express.urlencoded({extends:true}));  //express ko samjh aata hai data.
 app.set("views",path.join(__dirname,"views")); //views ke folder se access lene ke liyee..
 const { v4: uuidv4 } = require('uuid');  //uuid package hai id ke liye use kiye hai terminal me ja ke npm i uuid 
-const methodOverride = require("method-override");//mrthod overide kiye hai npm install method-override..
+const methodOverride = require("method-override");//method overide kiye hai npm install method-override..
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname,"public")));  //public folder se accesss lene ke liyee..
 
